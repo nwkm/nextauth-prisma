@@ -4,7 +4,26 @@ This is a mini test about user account connection.
 
 ## Getting Started
 
-First, run the development server:
+First create .env for docker-compose in docker folder:
+
+```bash
+POSTGRES_DB=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_ROOT_PASSWORD=root
+POSTGRES_PORT=5432
+```
+
+Start the local postgresql database with docker:
+
+```bash
+cd docker
+docker-compose up -d
+```
+
+Copy .env.example for .env file then make sure all variables are not empty.
+
+Run the development server:
 
 ```bash
 pnpm dev
