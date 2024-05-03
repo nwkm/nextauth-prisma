@@ -21,8 +21,6 @@ RUN pnpm run build
 FROM base
 
 ENV NODE_ENV production
-ENV NEXTAUTH_URL "http://localhost:3000"
-ENV NEXTAUTH_SECRET "s3cr3T"
 
 # Copy production dependencies from the prod-deps stage
 COPY --from=prod-deps /app/node_modules /app/node_modules
